@@ -4,3 +4,9 @@ kennel,核心
 parallel,并行
 vectorize,向量化
 integer,整数
+filter,过滤器 筛选
+split,分离 离开
+slice,切片 切开
+linspace,线性等分，
+similarity,相似
+initialize,初始化
