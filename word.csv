@@ -10,3 +10,7 @@ slice,切片 切开
 linspace,线性等分，
 similarity,相似
 initialize,初始化
+
+column,列
+row,行
+indices,指数 目录(index的复数)
