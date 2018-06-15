@@ -1,0 +1,43 @@
+
+https://www.jianshu.com/p/feb86c06c4f4
+
+python logging 模块
+
+    Logger 记录器，暴露了应用程序代码能直接使用的接口。
+
+    Handler 处理器，将（记录器产生的）日志记录发送至合适的目的地。
+
+    Filter 过滤器，提供了更好的粒度控制，它可以决定输出哪些日志记录。
+
+    Formatter 格式化器，指明了最终输出中日志记录的布局。
+
+
+
+
+
+
+
+
+class Config():  
+    # 创建一个logger  
+    logger = logging.getLogger('Recommend System')  
+    logger.setLevel(logging.DEBUG)  
+  
+    # 创建一个handler，用于写入日志文件  
+    fh = logging.FileHandler('test.log')  
+    fh.setLevel(logging.DEBUG)  
+  
+    # 再创建一个handler，用于输出到控制台  
+    ch = logging.StreamHandler()  
+    ch.setLevel(logging.DEBUG)  
+  
+    # 定义handler的输出格式  
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')  
+    fh.setFormatter(formatter)  
+    ch.setFormatter(formatter)  
+  
+    # 给logger添加handler  
+    logger.addHandler(fh)  
+    logger.addHandler(ch)  
+    def getLog(self):  
+        return self.logger  
